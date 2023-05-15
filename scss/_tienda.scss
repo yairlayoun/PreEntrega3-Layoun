@@ -1,0 +1,126 @@
+//tienda
+
+.tienda{
+    .filters{
+        padding: 0 20px 30px 30px;
+        a{
+            color: rgb(134, 130, 132);
+            font-size: 1.3em;
+            text-decoration: none;
+            margin-bottom: 4px;
+            text-transform: lowercase;
+            &:hover{
+                color: $mainColor;
+            }
+        }
+        span{
+            display: block;
+            color: rgb(0, 0, 0);
+            margin: 10px 0;
+            letter-spacing: 1px;
+        }
+        select{
+            color: darkred;
+            border: none;
+            background-color: white;
+            margin-bottom: 10px;
+            font-size: 1.4em;
+        }
+        li{
+            padding-left: 10px;
+            list-style: none;
+        }
+    }
+    .actions{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button{
+            margin-left: 10px;
+            background-color: darkred;
+            color: white;
+            padding: 6px;
+            border: none;
+            border-radius: 3px;
+        }
+        input{
+            padding: 6px;
+            border-radius: 3px;
+            border: none;
+            background-color: rgb(243, 245, 245);
+        }
+    }
+}
+
+
+
+
+.tienda{
+
+    display: grid;
+    grid-template-columns: 20% repeat(2,1fr);
+    grid-template-rows: 80px repeat(3,300px);
+    grid-template-areas: 
+    "actions actions actions" 
+    "filters uno uno" 
+    "filters dos tres"
+    "filters dos cuatro";
+    gap: 5px;
+
+    @media (width < 768px) {
+
+        .tienda{
+            display: flex;
+            flex-direction: column;}
+    
+      } 
+    
+}
+
+    .tienda section{
+        border-radius: 10px;
+    }
+
+    .tienda .actions{
+        padding: 0 30px;
+        grid-area: actions;
+    }
+
+    .tienda .filters{
+        grid-area: filters;
+    }
+
+    .tienda .prod{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 550px;
+        .prod img{
+            margin-bottom: 10px;
+    }
+    }
+
+    .tienda .prod2{
+       grid-area: dos;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .tienda .prod3{
+
+        grid-area: tres;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tienda .prod4{
+
+        grid-area: cuatro;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

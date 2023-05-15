@@ -1,0 +1,17 @@
+//animaciones 
+
+@keyframes animatedHeader {
+    0%{background-image: url(../img/headers/header.jpg)}
+    25%{background-image: url(../img/headers/header2.jpg)}
+    50%{background-image: url(../img/headers/header3.jpg)}
+    75%{background-image: url(../img/headers/header4.jpg)}
+    100%{background-image: url(../img/headers/header5.jpg)}
+}
+
+.header-animated{
+  height: 50vh;
+  background-size: cover;
+  animation-name: animatedHeader;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;;
+}
